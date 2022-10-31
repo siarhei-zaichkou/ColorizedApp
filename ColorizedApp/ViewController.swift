@@ -27,31 +27,22 @@ class ViewController: UIViewController {
         setupSlider(greenColorSlider, color: .green)
         setupSlider(blueColorSlider, color: .blue)
         
-        setupColorizedView()
+        colorizedView.layer.cornerRadius = 15
     }
 
     @IBAction func redSliderAction() {
         redColorValue.text = String(format: "%.2f", redColorSlider.value)
-        colorizedView.backgroundColor = UIColor.init(
-            red: CGFloat(redColorSlider.value),
-            green: CGFloat(greenColorSlider.value),
-            blue: CGFloat(blueColorSlider.value), alpha: 1)
+        colorize()
     }
     
     @IBAction func greenSliderAction() {
         greenColorValue.text = String(format: "%.2f", greenColorSlider.value)
-        colorizedView.backgroundColor = UIColor.init(
-            red: CGFloat(redColorSlider.value),
-            green: CGFloat(greenColorSlider.value),
-            blue: CGFloat(blueColorSlider.value), alpha: 1)
+        colorize()
     }
     
-    @IBAction func bluerSliderAction() {
+    @IBAction func blueSliderAction() {
         blueColorValue.text = String(format: "%.2f", blueColorSlider.value)
-        colorizedView.backgroundColor = UIColor.init(
-            red: CGFloat(redColorSlider.value),
-            green: CGFloat(greenColorSlider.value),
-            blue: CGFloat(blueColorSlider.value), alpha: 1)
+        colorize()
     }
     
     private func setupSlider(_ slider: UISlider, color: UIColor) {
@@ -61,13 +52,10 @@ class ViewController: UIViewController {
         slider.minimumTrackTintColor = color
     }
     
-    private func setupColorizedView() {
-        colorizedView.layer.cornerRadius = 15
+    private func colorize() {
         colorizedView.backgroundColor = UIColor.init(
             red: CGFloat(redColorSlider.value),
             green: CGFloat(greenColorSlider.value),
             blue: CGFloat(blueColorSlider.value), alpha: 1)
     }
-
 }
-

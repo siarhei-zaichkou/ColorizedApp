@@ -18,9 +18,9 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5pJ-MU-Tog">
                                 <rect key="frame" x="19" y="95.999999999999986" width="352" height="166.66666666666663"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="5pJ-MU-Tog" secondAttribute="height" multiplier="374:177" id="Xde-Or-zu7"/>
+                                    <constraint firstAttribute="height" constant="166.66999999999999" id="tYU-OU-muK"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="l8C-hP-5JZ">
@@ -96,7 +96,7 @@
                                             <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ahl-3L-jYB">
                                                 <rect key="frame" x="-2" y="98" width="234" height="32"/>
                                                 <connections>
-                                                    <action selector="bluerSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="yvW-Lf-Sol"/>
+                                                    <action selector="blueSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="Avu-en-whd"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -108,11 +108,11 @@
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l8C-hP-5JZ" secondAttribute="trailing" constant="12.5" id="7kb-FJ-Rgj"/>
-                            <constraint firstItem="5pJ-MU-Tog" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Te-mK-Zvy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5pJ-MU-Tog" secondAttribute="trailing" constant="19" id="DgU-q5-suC"/>
                             <constraint firstItem="l8C-hP-5JZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="IHk-ZH-KZ3"/>
-                            <constraint firstItem="5pJ-MU-Tog" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.197545" id="N08-Gd-Gub"/>
                             <constraint firstItem="5pJ-MU-Tog" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="O2Q-Bs-v1r"/>
                             <constraint firstItem="l8C-hP-5JZ" firstAttribute="top" secondItem="5pJ-MU-Tog" secondAttribute="bottom" constant="51" id="uBq-Qx-Hh0"/>
+                            <constraint firstItem="5pJ-MU-Tog" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="w9s-JI-nIp"/>
                         </constraints>
                     </view>
                     <connections>
@@ -127,13 +127,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="69.642857142857139"/>
+            <point key="canvasLocation" x="-529" y="94"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
