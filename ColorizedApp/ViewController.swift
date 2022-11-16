@@ -1,9 +1,4 @@
-//
-//  ViewController.swift
-//  ColorizedApp
-//
-//  Created by Sergey on 30.10.22.
-//
+
 
 import UIKit
 
@@ -41,7 +36,11 @@ class ViewController: UIViewController {
         case greenColorSlider:
             greenColorValue.text = string(from: greenColorSlider)
         default:
-            blueColorValue.text = string(from: blueColorSlider)        }
+            blueColorValue.text = string(from: blueColorSlider)
+            
+        }
+        
+       
     }
     
     private func setupSlider(_ slider: UISlider, color: UIColor) {

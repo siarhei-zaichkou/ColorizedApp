@@ -24,7 +24,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="l8C-hP-5JZ">
-                                <rect key="frame" x="15" y="313.66666666666669" width="362.66666666666669" height="129"/>
+                                <rect key="frame" x="15" y="412.66666666666669" width="362.66666666666669" height="129.00000000000006"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ZlO-EU-JTY">
                                         <rect key="frame" x="0.0" y="0.0" width="63.666666666666664" height="129"/>
@@ -42,7 +42,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJe-ea-jQB">
-                                                <rect key="frame" x="0.0" y="102.66666666666663" width="63.666666666666664" height="26.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="102.66666666666669" width="63.666666666666664" height="26.333333333333343"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -68,7 +68,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tu-mf-RIQ">
-                                                <rect key="frame" x="0.0" y="102.66666666666663" width="55" height="26.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="102.66666666666669" width="55" height="26.333333333333343"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -111,7 +111,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5pJ-MU-Tog" secondAttribute="trailing" constant="19" id="DgU-q5-suC"/>
                             <constraint firstItem="l8C-hP-5JZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="IHk-ZH-KZ3"/>
                             <constraint firstItem="5pJ-MU-Tog" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="O2Q-Bs-v1r"/>
-                            <constraint firstItem="l8C-hP-5JZ" firstAttribute="top" secondItem="5pJ-MU-Tog" secondAttribute="bottom" constant="51" id="uBq-Qx-Hh0"/>
+                            <constraint firstItem="l8C-hP-5JZ" firstAttribute="top" secondItem="5pJ-MU-Tog" secondAttribute="bottom" constant="150" id="uBq-Qx-Hh0"/>
                             <constraint firstItem="5pJ-MU-Tog" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="w9s-JI-nIp"/>
                         </constraints>
                     </view>
@@ -127,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1063" y="-79"/>
+            <point key="canvasLocation" x="-832.30769230769226" y="-84.597156398104261"/>
         </scene>
     </scenes>
     <resources>
