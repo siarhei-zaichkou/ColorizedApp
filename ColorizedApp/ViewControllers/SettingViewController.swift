@@ -2,8 +2,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SettingViewController: UIViewController {
 
+    // MARK: - @IBOutlets
+    
     @IBOutlet var colorizedView: UIView!
     
     @IBOutlet var redColorSlider: UISlider!
@@ -14,18 +16,27 @@ class ViewController: UIViewController {
     @IBOutlet var greenColorValue: UILabel!
     @IBOutlet var blueColorValue: UILabel!
     
+    var viewColor: UIColor!
+    var delegate: SettingViewControllerDelegate!
+    var rgbColors: CIColor {
+        CIColor(color: viewColor)
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupSlider(redColorSlider, color: .red)
-        setupSlider(greenColorSlider, color: .green)
-        setupSlider(blueColorSlider, color: .blue)
+        setupSlider(redColorSlider, color: rgbColors.red)
+        setupSlider(greenColorSlider, color: rgbColors.green)
+        setupSlider(blueColorSlider, color: rgbColors.blue)
         
         setValue(for: redColorValue, greenColorValue, blueColorValue)
-        
+        colorizedView.backgroundColor = viewColor
         colorizedView.layer.cornerRadius = 15
     }
+    
+    // MARK: - @IBActions
     
     @IBAction func rgbSliderAction(_ sender: UISlider) {
         setColor()
@@ -37,17 +48,29 @@ class ViewController: UIViewController {
             greenColorValue.text = string(from: greenColorSlider)
         default:
             blueColorValue.text = string(from: blueColorSlider)
-            
         }
-        
-       
     }
     
-    private func setupSlider(_ slider: UISlider, color: UIColor) {
-        slider.value = 0
+    @IBAction func doneButtonPressed() {
+        delegate.setBackground(color: colorizedView.backgroundColor)
+        dismiss(animated: true)
+    }
+    
+    // MARK: - Private Methods
+    
+    private func setupSlider(_ slider: UISlider, color: CGFloat) {
+        slider.value = Float(color)
         slider.minimumValue = 0
         slider.maximumValue = 1
-        slider.minimumTrackTintColor = color
+        
+        // корявенько с ифами, зато работает :)
+        if slider == redColorSlider {
+            slider.minimumTrackTintColor = .red
+        } else if slider == greenColorSlider {
+            slider.minimumTrackTintColor = .green
+        } else if slider == blueColorSlider {
+            slider.minimumTrackTintColor = .blue
+        }
     }
     
     private func setColor() {
